@@ -42,16 +42,7 @@ struct sub{
     stud1 *curr = NULL;
 
 
-
-
-
 void insert ();
-int isEmpty(infostptr  sPtr);
-void printList();
-void display_all(infostptr currentPtr);
-
-
-
 
 
 int main()
@@ -68,11 +59,9 @@ int main()
      switch (choice) {
      case 1:
      insert();
-     printList(head);
      break;
 
      case 2:
-        display_all(head);
         break;
 
      default :
@@ -221,9 +210,6 @@ void printList(stud1 *currentPtr)
 
     newPtr->nextPtr = NULL;
 
-
-
-
 //read all data from the file
 if(head == NULL){
 
@@ -316,40 +302,4 @@ if(head == NULL){
  printf(" No memory available.\n" );
  }
  }
-
-
-
- void display_all(stud1 *currentPtr){
-
- puts("The list is:");
-
-
- while (currentPtr != NULL) {
-    printf("\n name : %s \n", currentPtr->name);
-    printf(" code : %d  \n", currentPtr->code);
-    printf(" ID : %lli \n", currentPtr->national_id);
-    printf(" birth_day : %s \n", currentPtr->Birthday);
-    printf(" E-mail : %s  \n", currentPtr->email);
-    printf(" current_year : %s  \n", currentPtr->currentyear);
-    printf(" section : %d  \n", currentPtr->section);
-
-    printf(" name 1 : %s \n", currentPtr->subjects[0]->name);
-    printf(" mark 1 : %d \n", currentPtr->subjects[0]->mark);
-    printf(" name 2 : %s \n", currentPtr->subjects[1]->name);
-    printf(" mark 2 : %d \n", currentPtr->subjects[1]->mark);
-    printf(" name 3 : %s \n", currentPtr->subjects[2]->name);
-    printf(" mark 3 : %d \n", currentPtr->subjects[2]->mark);
-    printf(" name 4 : %s \n", currentPtr->subjects[3]->name);
-    printf(" mark 4 : %d \n", currentPtr->subjects[3]->mark);
-
-
-    puts("-----------");
-
-    currentPtr = currentPtr->nextPtr;
- }
-
-
- }
-
-
 
