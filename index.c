@@ -46,7 +46,6 @@ struct sub{
 
 
 void insert ();
-void subjects_insert(infostptr sPtr);
 int isEmpty(infostptr  sPtr);
 void printList();
 void display_all(infostptr currentPtr);
